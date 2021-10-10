@@ -5,7 +5,7 @@ React-Native webview test
  *  expo start
  *  npm install react-native-webview
  
- expo SDK
- -42.0.0
-react-native-webview
- - 11.6.2
+ *  expo SDK
+    -42.0.0
+*  react-native-webview
+   - 11.6.2
