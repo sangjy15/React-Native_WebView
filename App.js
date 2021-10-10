@@ -5,18 +5,24 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <WebView 
-      source={{url: 'https://www.google.com/'}}
-      onLoad={console.log('Lodeed!!!')}
-    />
+    <View style={{flex: 1, flexDirection:'column'}}>
+      <Text>Show webview</Text>
+      <WebView style={{flex: 1}}
+      originWhitelist={['*']}
+      source={PolicyHTML}
+      style={{ marginTop: 20 }}
+      javaScriptEnabled={true}
+      domStorageEnabled={true} />
+    </View>
   );
 }
-
+const PolicyHTML = require('./html/kakao_login.html');
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    flex:1,
+    backgroundColor:  '#ff00ff'
+  },webView :{
+    height: 320,
+    width : 200
+  }
 });
